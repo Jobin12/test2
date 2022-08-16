@@ -1,4 +1,4 @@
 Just another file
 
-edited
+edited from remote repo
 edited from local repo
