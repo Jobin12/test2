@@ -21,17 +21,17 @@ jobs:
       - name: Trivy vulnerability scan
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'ubuntu'
+          image-ref: 'httpd'
           format: 'sarif'
           exit-code: '1'
           ignore-unfixed: true
           vuln-type: 'os,library'
           severity: 'CRITICAL,HIGH,MEDIUM'
           hide-progress: false
-          output: 'trivy-nginx-results.sarif'
+          output: 'trivy-httpd-results.sarif'
           
       - name: upload Trivy scan results for Image Processing
         uses: actions/upload-artifact@v3
         with:
-           name: trivy-nginx-artifact
-           path: ./trivy-nginx-results.sarif
+           name: trivy-httpd-artifact
+           path: ./trivy-httpd-results.sarif
