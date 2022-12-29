@@ -31,7 +31,7 @@ jobs:
           image-ref: 'ubuntu'
           format: 'sarif'
           exit-code: '1'
-          ignore-unfixed: true
+          # ignore-unfixed: true
           vuln-type: 'os,library'
           severity: 'CRITICAL,HIGH,MEDIUM'
           hide-progress: false
