@@ -21,12 +21,12 @@ jobs:
       - name: Trivy vulnerability scan
         uses: aquasecurity/trivy-action@master
         with:
-          image-ref: 'nginx'
+          image-ref: 'ubuntu'
           format: 'sarif'
           exit-code: '1'
           ignore-unfixed: true
           vuln-type: 'os,library'
-          severity: 'CRITICAL,HIGH'
+          severity: 'CRITICAL,HIGH,MEDIUM'
           hide-progress: false
           output: 'trivy-nginx-results.sarif'
           
